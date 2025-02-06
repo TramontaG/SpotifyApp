@@ -11,6 +11,7 @@
 		"docs": "typedoc ./src/index.ts"
 	},
 	"devDependencies": {
+		"@types/dotenv": "^8.2.3",
 		"@types/express": "^4.17.21",
 		"@types/jest": "^29.5.14",
 		"nodemon": "^3.1.9",
@@ -18,7 +19,11 @@
 		"typescript": "^5.7.3"
 	},
 	"dependencies": {
-		"link-module-alias": "^1.2.0"
+		"axios": "^1.7.9",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.2",
+		"link-module-alias": "^1.2.0",
+		"querystring": "^0.2.1"
 	},
 	"_moduleAliases": {
 		"src": "dist"
