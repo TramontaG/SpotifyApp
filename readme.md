@@ -2,19 +2,9 @@
 
 ## Overview
 
-This is a simple application that provides an API for accessing your Spotify account. It allows you to interact with your Spotify data, such as your playlists, tracks, and more.
-
-## Features
-
-- _To be determined!_
+This is a simple application that provides an API for authenticating your Spotify app with an account. You can get oauth token an refresh tokens using this API. For everything else, please use the official API described in https://developer.spotify.com/documentation/web-api/reference/
 
 ## Getting Started
-
-### Prerequisites
-
-- A Spotify account
-- A Spotify Developer account
-- Basic understanding of RESTful APIs
 
 ### Configuration
 

@@ -12,26 +12,30 @@ import { TokenResponse } from '../Redirect';
 
 const router = express.Router();
 
-router.get('/link', (req, res) => {
+router.get('/link', express.json(), (req, res) => {
+	const { scope } = req.body;
+
 	res.send(
 		'https://accounts.spotify.com/authorize?' +
 			querystring.stringify({
 				response_type: 'code',
 				client_id: process.env.SPOTIFY_CLIENT_ID,
-				scope: 'user-read-playback-state',
+				scope,
 				redirect_uri: process.env.SPOTIFY_REDIRECT_URI,
 				state: Context.get('runId'),
 			})
 	);
 });
 
-router.get('/', (req, res) => {
+router.get('/', express.json(), (req, res) => {
+	const { scope } = req.body;
+
 	res.redirect(
 		'https://accounts.spotify.com/authorize?' +
 			querystring.stringify({
 				response_type: 'code',
 				client_id: process.env.SPOTIFY_CLIENT_ID,
-				scope: 'user-read-playback-state',
+				scope,
 				redirect_uri: process.env.SPOTIFY_REDIRECT_URI,
 				state: Context.get('runId'),
 			})
